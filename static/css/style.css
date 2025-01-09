@@ -1268,6 +1268,11 @@ p.form-message.success, p.form-message.error {
 .projects_img {
   height: 200px;
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.projects_img:hover {
+  transform: scale(1.05);
 }
 
 .projects_img img {
