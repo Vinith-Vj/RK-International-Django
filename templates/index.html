@@ -122,7 +122,7 @@
         </div> <!-- header navbar -->
 
         <div id="home" class="header_slider">
-            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url('{% static "images/slider-1.jpg" %}')">
+            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url('{% static "images/img16.jpeg" %}')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 col-md-10">
@@ -146,9 +146,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="height: 90%">
                         <div class="features_image">
-                            <img src='{% static "images/features-1.jpg" %}' alt="features">
+                            <img src='{% static "images/img1.jpeg" %}' alt="features">
                             <div class="features_content">
                                 <div class="features_title" style="font-size: 30px;">Project Planing</div>
                                 <div class="features_desc">Involves outlining the steps and resources needed for a successful project. It includes defining objectives, setting timelines, budgeting, and allocating responsibilities. Effective planning ensures coordination among teams, mitigates risks, and provides a clear roadmap, ensuring the project stays on track and meets both time and quality standards.</div>
@@ -171,9 +171,9 @@
 
 
                 <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" style="height: 90%">
                         <div class="features_image hovers">
-                            <img src='{% static "images/features-2.jpg" %}' alt="features">
+                            <img src='{% static "images/img24.jpeg" %}' alt="features">
                             <div class="features_content">
                                 <div class="features_title" style="font-size: 30px;">Architecture</div>
                                 <div class="features_desc">Focuses on designing functional and aesthetically pleasing structures. It involves planning layouts, ensuring safety regulations, and considering environmental factors. Architects work closely with clients to create innovative designs that reflect the desired vision while balancing form, function, sustainability, and cost-effectiveness, ensuring a seamless transition from concept to reality.</div>
@@ -182,9 +182,9 @@
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s" style="height: 90%">
                         <div class="features_image hovers">
-                            <img src='{% static "images/features-3.jpg" %}' alt="features">
+                            <img src='{% static "images/img13.jpeg" %}' alt="features">
                             <div class="features_content">
                                 <div class="features_title" style="font-size: 30px;">Construction</div>
                                 <div class="features_desc">Involves the physical execution of architectural plans, from site preparation to building completion. This phase includes earthwork, foundation laying, structural work, and installation of utilities. It requires skilled labor, proper equipment, and adherence to safety standards. Timely, high-quality construction ensures that the project meets specifications and is ready for use.
@@ -578,6 +578,29 @@
 
             <div class="row justify-content-center projects">
                 <div class="row col-lg-12 projects_contents">
+                    {% for project in projects %}
+                        <div class=" projects_img col-lg-4 col-sm-12 hovers">
+                            <img src="{{ project.image.url }}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="800">
+                            <div class="projects_details" data-aos="fade-down" data-aos-duration="800">
+                                <p> Project : {{ project.name }} </p>
+                                <p>Client Name : {{ project.client_name }}</p> 
+                                <p> Project Value : {{ project.value }}  </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% comment %} <div class=" projects_img col-lg-4 col-sm-12 hovers">
+                        <img src="{% static "images/img1.jpeg" %}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="800">
+                        <div class="projects_details" data-aos="fade-down" data-aos-duration="800">
+                            <p> Project : Asphalt road </p>
+                            <p>Client Name : M/S AL Bashair</p> 
+                            <p> Project Value : 39991.615</p>
+                        </div>
+                    </div> {% endcomment %}
+                    
+                </div>
+
+
+                {% comment %} <div class="row col-lg-12 projects_contents">
                     <div class=" projects_img col-lg-4 col-sm-12 hovers">
                         <img src="{% static "images/img1.jpeg" %}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="800">
                         <div class="projects_details" data-aos="fade-down" data-aos-duration="800">
@@ -602,35 +625,7 @@
                             Project Value : 39991.615
                         </div>
                     </div>
-                </div>
-
-
-                <div class="row col-lg-12 projects_contents">
-                    <div class=" projects_img col-lg-4 col-sm-12 hovers">
-                        <img src="{% static "images/img1.jpeg" %}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="800">
-                        <div class="projects_details" data-aos="fade-down" data-aos-duration="800">
-                            Project : Asphalt road <br>
-                            Client Name : M/S AL Bashair <br>
-                            Project Value : 39991.615
-                        </div>
-                    </div>
-                    <div class=" projects_img col-lg-4 col-sm-12 hovers">
-                        <img src="{% static "images/img1.jpeg" %}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="900">
-                        <div class="projects_details" data-aos="fade-down" data-aos-duration="900">
-                            Project : Asphalt road <br>
-                            Client Name : M/S AL Bashair <br>
-                            Project Value : 39991.615
-                        </div>
-                    </div>
-                    <div class=" projects_img col-lg-4 col-sm-12 hovers">
-                        <img src="{% static "images/img1.jpeg" %}" class="img-fluid w-100 h-100 object-fit-cover" alt="" data-aos="fade-down" data-aos-duration="1000">
-                        <div class="projects_details" data-aos="fade-down" data-aos-duration="1000">
-                            Project : Asphalt road <br>
-                            Client Name : M/S AL Bashair <br>
-                            Project Value : 39991.615
-                        </div>
-                    </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>
@@ -641,7 +636,7 @@
     
     <!--====== BRAND LOGO PART START ======-->
 
-    <section id="brand" class="brand_logo_area pt-20">
+    <section id="brand" class="brand_logo_area pt-40">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
