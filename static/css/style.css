@@ -732,7 +732,7 @@ p {
      } }
   @media (max-width: 767px) {
     .single_slider {
-      height: 650px;
+      height: 100vh;
       /* border-bottom-left-radius: 80px; */
      } }
   .single_slider::before {
