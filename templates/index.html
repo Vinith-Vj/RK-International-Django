@@ -33,7 +33,7 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href='{% static "css/style.css" %}'>
 
-    <link rel="stylesheet" href='{% static "css/style-slider.css" %}'>
+    {% comment %} <link rel="stylesheet" href='{% static "css/style-slider.css" %}'> {% endcomment %}
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -42,6 +42,7 @@
 
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     
     
     
@@ -81,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg" style="padding: 0;">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="">
                                 <img src='{% static "images/RK International background.png" %}'>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,7 +129,7 @@
                         <div class="col-lg-10 col-md-10">
                             <div class="slider_content">
                                 <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">RK INTERNATIONAL</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">WE BUILD YOUR TRUST</p>
+                                <p class="wow fadeInUp rk_quote" data-wow-duration="1.3s" data-wow-delay="0.5s">WE BUILD YOUR TRUST</p>
                                 <!-- <a href="" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Test</a> -->
                             </div> <!-- slider content -->
                         </div>
@@ -173,7 +174,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" style="height: 90%">
                         <div class="features_image hovers">
-                            <img src='{% static "images/img24.jpeg" %}' alt="features">
+                            <img src='{% static "images/Road_Works.jpeg" %}' alt="features">
                             <div class="features_content">
                                 <div class="features_title" style="font-size: 30px;">Architecture</div>
                                 <div class="features_desc">Focuses on designing functional and aesthetically pleasing structures. It involves planning layouts, ensuring safety regulations, and considering environmental factors. Architects work closely with clients to create innovative designs that reflect the desired vision while balancing form, function, sustainability, and cost-effectiveness, ensuring a seamless transition from concept to reality.</div>
@@ -223,7 +224,7 @@
                             <div id="modal-overlay" class="modal-overlay"></div>
 
                             <!-- Custom Modal -->
-                            <div id="custom-modal" class="custom-modal">
+                            {% comment %} <div id="custom-modal" class="custom-modal">
                                 <span class="close-btn" id="close-btn">&times;</span>
                                 <h2>Chairman's Statement</h2>
                                 <p style="text-align: justify;">
@@ -233,7 +234,7 @@
                                 Upholding our reputation for integrity in the community and maintaining an ethical work environment for all our employees remain our unwavering commitment
                                 "
                                 </p>
-                            </div>
+                            </div> {% endcomment %}
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
@@ -302,7 +303,7 @@
             </div> row -->
 
 
-            <div class="row">
+            {% comment %} <div class="row">
                 <div class="col-12 hovers">
                     <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                         <div class="services_img col-lg-5 col-sm-12">
@@ -350,7 +351,34 @@
                         </div>
                     </div> 
                 </div>
-            </div> <!-- row -->
+            </div>   {% endcomment %}
+
+            <div class="row">
+                {% for package in packages %}
+                    <div class="col-12 hovers">
+                        <div class="row align-items-center single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="service_content col-lg-7 col-sm-12 order-2 order-lg-1">
+                                    <h4 class="title service_title">{{ package.title }}</h4>
+                                    <p class="service_p">{{ package.description }}</p>
+                                </div>
+                                <div class="services_img col-lg-5 col-sm-12 order-1 order-lg-2">
+                                    <img src='{{ package.image.url }}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                                </div>
+                            {% else %}
+                                <div class="services_img col-lg-5 col-sm-12">
+                                    <img src='{{ package.image.url }}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                                </div>
+                                <div class="service_content col-lg-7 col-sm-12">
+                                    <h4 class="title service_title">{{ package.title }}</h4>
+                                    <p class="service_p">{{ package.description }}</p>
+                                </div>
+                            {% endif %}
+                        </div> 
+                    </div>
+                {% endfor %}
+            </div> 
+            
 
 
 
@@ -471,6 +499,8 @@
 
     <!--====== TESTIMONIAL PART ENDS ======-->
 
+   
+    
 
     <!--====== GALLERY PART STARTS ======-->
 
@@ -789,15 +819,15 @@
 
     <section class="footer_area bg_cover" style="background-image: url('{% static "images/footer_bg.jpg" %}')">
         <div class="container">
-            <div class="footer_widget pt-80 pb-130">
+            <div class="footer_widget pb-60">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="footer_about mt-50">
                             <a href="#"><img src='{% static "images/RK International background.png" %}' style="height: 100px;" alt="logo"></a>
-                            <p style="text-align: justify; padding-right: 54px;">Lorem ipsum dolor sit consetetur sadipscing elitr, sed diamnonumy eirmod tempor inidunt ut labore et dolore. Lorem ipsum dolor sit consetetur sadipscing elitr, sed diamnonumy eirmod tempor inidunt ut labore et dolore.</p>
+                            <p style="text-align: justify; padding-right: 54px;">Lorem ipsum dolor sit consetetur sadipscing elitr, sed diamnonumy eirmod tempor inidunt ut labore et dolore. </p>
                         </div> <!-- footer about -->
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-4">
                         <div class="footer_link_wrapper d-flex flex-wrap">
                             <div class="footer_link mt-45 col-lg-3">
                                 <h4 class="footer_title">Links</h4>
@@ -809,22 +839,19 @@
                                     <li><a class="page-scroll" href="#contact">Contact Us</a></li>
                                 </ul>
                             </div> <!-- footer link -->
-                            <div class="footer_link mt-45 col-lg-4">
-                                <h4 class="footer_title">Support</h4>
-                                <ul class="link">
-                                    <li><a href="#1">Terms & Condition</a></li>
-                                    <li><a href="#1">Privacy & Policy</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer_link_wrapper d-flex flex-wrap">
                             <div class="footer_link mt-45 col-lg-3">
                                 <h4 class="footer_title">Socials</h4>
                                 <ul class="link">
                                     <li><a href="#1"><i class="fa-brands fa-facebook"></i> Facebook </a></li>
-                                    <li><a href="#1"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                                    {% comment %} <li><a href="#1"><i class="fa-brands fa-twitter"></i> Twitter</a></li> {% endcomment %}
                                     <li><a href="#1"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
                                 </ul>
                             </div> <!-- footer link -->
-                        </div> <!-- footer link wrapper -->
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer widget -->
@@ -860,7 +887,7 @@
     <!--====== WOW js ======-->
     <script src='{% static "js/wow.min.js" %}'></script>
 
-    <script src='{% static "js/app-slider.js" %}'></script>
+    {% comment %} <script src='{% static "js/app-slider.js" %}'></script> {% endcomment %}
 
     
 
