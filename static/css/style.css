@@ -747,7 +747,7 @@ p {
 .slider_content {
   padding-top: 50px; }
   .slider_content .slider_title {
-    font-size: 60px;
+    font-size: 65px;
     color: #fff;
     margin-top: 15px; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -828,6 +828,20 @@ p {
   }
  }
 
+.management_image img {
+  width: 100%;
+  border-radius: 40px;
+  border-bottom-right-radius: 0;
+  object-fit: cover;
+  height: 645px;
+ }
+
+ @media (max-width: 576px) {
+  .management_image img {
+    height: 400px;
+  }
+ }
+
 
 .about_content {
   padding: 35px; }
@@ -872,6 +886,52 @@ p {
     margin-top: 25px;
     text-align: justify; }
   .about_content .main-btn {
+    margin-top: 45px; }
+
+.management_content {
+  padding: 0px;
+ }
+  .management_content .sub_title {
+    font-size: 38px;
+    font-weight: 400;
+    position: relative; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .management_content .sub_title {
+        font-size: 32px; } }
+    @media (max-width: 767px) {
+      .management_content .sub_title {
+        font-size: 24px; } }
+    .management_content .sub_title::before {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 100%;
+      left: -45px;
+      top: 18px;
+      background-color: #1A3154; }
+    .management_content .sub_title span {
+      font-size: 70px;
+      font-weight: 800;
+      color: #f48124; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .management_content .sub_title span {
+          font-size: 60px; } }
+      @media (max-width: 767px) {
+        .management_content .sub_title span {
+          font-size: 44px; } }
+  .management_content .main_title {
+    font-size: 40px; 
+  }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .management_content .main_title {
+        font-size: 32px; } }
+    @media (max-width: 767px) {
+      .management_content .main_title {
+        font-size: 24px; } }
+  .management_content p {
+    margin-top: 25px;
+    text-align: justify; }
+  .management_content .main-btn {
     margin-top: 45px; }
 
 /*===========================
@@ -1351,4 +1411,111 @@ p.form-message.success, p.form-message.error {
   .rk_quote::before {
     width: 38%;
   }
+}
+
+
+
+
+
+.single_slider {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* border-bottom-left-radius: 200px;  */
+}
+
+@media only screen and (min-width: 1400px) {
+  .single_slider {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single_slider {
+    height: 100vh;
+    /* border-bottom-left-radius: 100px; */
+  }
+}
+
+@media (max-width: 767px) {
+  .single_slider {
+    height: 100vh;
+    /* border-bottom-left-radius: 80px; */
+  }
+}
+
+.single_slider::before {
+  position: absolute;
+  content: '';
+  background-color: rgb(0 0 0 / 30%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.slider_content {
+  padding-top: 50px;
+}
+
+.slider_content .slider_title {
+  font-size: 65px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .slider_content .slider_title {
+    font-size: 44px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .slider_content .slider_title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider_content .slider_title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .slider_content .slider_title {
+    font-size: 40px;
+  }
+}
+
+.slider_content .slider_title span {
+  display: contents;
+  color: #FFB316;
+}
+
+.slider_content p {
+  font-size: 32px;
+  color: rgb(255 255 255);
+  margin-top: 16px;
+  max-width: 550px;
+}
+
+@media (max-width: 767px) {
+  .slider_content p {
+    font-size: 16px;
+  }
+}
+
+.slider_content .main-btn {
+  margin-top: 45px;
+}
+
+/* Fade transition for carousel */
+.carousel-fade .carousel-item {
+  opacity: 0.1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
 }
