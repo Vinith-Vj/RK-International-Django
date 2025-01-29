@@ -286,6 +286,62 @@
                     <div class="management_image mt-sm-50 wow fadeInLefttBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
                         <img src='{% static "images/Chairman.jpeg" %}' alt="About">
                     </div> <!-- about image -->
+                    <br>
+                    <span style='font-weight: bold;'>Chairman and Managing Director - Radhakrishnan Narayanan</span>
+                </div>
+
+
+            </div>
+
+            
+            <div class="row mt-50 align-items-center">
+                <div class="col-12 mb-20">
+                    <h2>Board Directors</h2>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 hovers mb-20">
+                    <div class='board_directors'>
+                        <div class="individual_img">
+                            <img src="{% static "images/individuals.png" %}" alt="">
+                        </div>
+
+                        <h4>Jayasree Radhakrishnan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis.</p>
+                        <span>Vice Chairman</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 hovers mb-20">
+                    <div class='board_directors'>
+                        <div class="individual_img">
+                            <img src="{% static "images/individuals.png" %}" alt="">
+                        </div>
+
+                        <h4>Athul Radhakrishnan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis.</p>
+                        <span>COO and Director</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 hovers mb-20">
+                    <div class='board_directors'>
+                        <div class="individual_img">
+                            <img src="{% static "images/individuals.png" %}" alt="">
+                        </div>
+
+                        <h4>Rahul Radhakrishnan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis.</p>
+                        <span>CEO and Director </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 hovers mb-20">
+                    <div class='board_directors'>
+                        <div class="individual_img">
+                            <img src="{% static "images/individuals.png" %}" alt="">
+                        </div>
+
+                        <h4>Jithul Radhakrishnan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis.</p>
+                        <span>CFO and Director</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -781,7 +837,8 @@
                             <h4 class="title" data-aos="slide-right" data-aos-duration="800">Contact Us</h4>
                         </div> <!-- section title -->
                         
-                        <form id="contact-form">
+                        <form method='POST' action="{% url 'index' %}" id="contact-form">
+                            {% csrf_token %}
                             <div class="name-phone">
                                 <div class="single_form" data-aos="slide-right" data-aos-duration="800">
                                     <input name="name" type="text" placeholder="Name">
