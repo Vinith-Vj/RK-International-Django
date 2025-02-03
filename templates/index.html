@@ -43,7 +43,13 @@
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
-    
+    <style>
+        @media (max-width: 576px) {
+            .navbar-brand {
+              margin-right: 0px;
+            }
+          }
+    </style>
     
     
 </head>
@@ -85,9 +91,12 @@
                             <a class="navbar-brand" href="">
                                 <img src='{% static "images/RK International background.png" %}'>
                             </a>
-                            <a class="navbar-brand" href="">
-                                <img src='{% static "images/Royal Group Logo.png" %}' style="width: 120px; height: 84px;">
-                            </a>
+                            {% comment %} <a class="navbar-brand" href=""> {% endcomment %}
+                            <div class="d-flex flex-column">
+                                <img src='{% static "images/Royal Group Logo.png" %}' style="width: 120px;">
+                                <p style="font-size: 10px">Health Care | Construction | Petroleum | Retail | Fitnesss</p>
+                            </div>
+                            {% comment %} </a> {% endcomment %}
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
@@ -120,7 +129,7 @@
                                     <div class="col-lg-10 col-md-10">
                                         <div class="slider_content">
                                             <h2 class="slider_title">RK INTERNATIONAL</h2>
-                                            <span class="rk_quote">Medical | Construction | Petroleum | Retail | Fitness</span>
+                                            <span class="rk_quote">Fuel Stations | Roadworks | Schools | Civil Buildings</span>
                                             <p class="rk_quote">WE BUILD YOUR TRUST</p>
                                         </div>
                                     </div>
@@ -135,7 +144,7 @@
                                     <div class="col-lg-10 col-md-10">
                                         <div class="slider_content">
                                             <h2 class="slider_title">RK INTERNATIONAL</h2>
-                                            <span class="rk_quote">Medical | Construction | Petroleum | Retail | Fitness</span>
+                                            <span class="rk_quote">Fuel Stations | Roadworks | Schools | Civil Buildings</span>
                                             <p class="rk_quote">WE BUILD YOUR TRUST</p>
                                         </div>
                                     </div>
@@ -150,7 +159,7 @@
                                     <div class="col-lg-10 col-md-10">
                                         <div class="slider_content">
                                             <h2 class="slider_title">RK INTERNATIONAL</h2>
-                                            <span class="rk_quote">Medical | Construction | Petroleum | Retail | Fitness</span>
+                                            <span class="rk_quote">Fuel Stations | Roadworks | Schools | Civil Buildings</span>
                                             <p class="rk_quote">WE BUILD YOUR TRUST</p>
                                         </div>
                                     </div>
@@ -314,7 +323,7 @@
                         <h4>Radhakrishnan Narayanan</h4>
                         
                         <div style="width: 100%;">
-                            <span>Chairman and Managing Director - Royal Group</span>
+                            <span>Chairman and Managing Director - The Royal Group</span>
                         </div>
                         <div style="width: 100%;">
 
@@ -331,7 +340,7 @@
                         <h4>Jayasree Radhakrishnan</h4>
                         
                         <div style="width: 100%;">
-                            <span>Vice Chairman - Royal Group</span>
+                            <span>Vice Chairman - The Royal Group</span>
                         </div>
                         <p>MBBS (Sohar Medical college)</p>
                     </div>
@@ -345,9 +354,9 @@
                         <h4>Athul Radhakrishnan</h4>
                         
                         <div style="width: 100%;">
-                            <span>COO and Director - Royal Group </span>
+                            <span>COO and Director - The Royal Group </span>
                         </div>
-                        <p>M. S Mechanical Engineering /B.S Aerospace Engineering (Embry Riddle Aeronautical University,Florida,United State America)  </p>
+                        <p>M. S Mechanical Engineering /B.S Aerospace Engineering (Embry Riddle Aeronautical University,Florida,United States of America)  </p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 hovers mb-20">
@@ -359,13 +368,12 @@
                         <h4>Rahul Radhakrishnan</h4>
                         
                         <div style="width: 100%;">
-                            <span>CEO and Director - Royal Group</span>
+                            <span>CEO and Director - The Royal Group</span>
                         </div>
-                        <p>MSC in Entrepreneurship (University of Leeds (UK)), BSC in Business Management
-                            (Leeds Beckett University (UK)),
-                            Active IQ Level 3 Diploma in Personal
-                            In Training, F.A Level 2 in Football
-                            Management(UK)</p>
+                        <p>MSC in Entrepreneurship (University of Leeds, United Kingdom) 
+                            BSC in Business Management (Leeds Beckett University , United Kingdom) 
+                            Active IQ Level 3 Diploma in Personal Training (UK)
+                            F.A Level 2 in Coaching Football (UK)</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 hovers mb-20">
@@ -377,7 +385,7 @@
                         <h4>Jithul Radhakrishnan</h4>
                         
                         <div style="width: 100%;">
-                            <span>CFO and Director – Royal Group </span>
+                            <span>CFO and Director – The Royal Group </span>
                         </div>
                         <p>BBA , Jaipur national University </p>
                     </div>
@@ -395,11 +403,10 @@
                         <div class="team_members_img">
                             <img src="{% static "images/individuals.png" %}" alt="">
                         </div>
-                        <h5>Mohamed Salim Abduallah Al Maawali</h5>
+                        <h5>Mohamed Salim Abdullah Al Maawali</h5>
                         <p>Public Relations Officer</p>
                         <div style="width: 100%;">
-                            <span>Working Experience (15Years)</span>
-                            <span>Multiple companies</span>
+                            <span>15 years working experience as PRO in various reputed Organisations</span>
                         </div>
                     </div>
                 </div>
@@ -423,7 +430,7 @@
                         <h5>Karthick Verappan</h5>
                         <p>Project Coordinator</p>
                         <div style="width: 100%;">
-                            <span>B.E Civil (Anna University)D.CE( tamilnadu
+                            <span>B.E Civil (Anna University)D.CE( Tamilnadu
                                 Technical Education)</span>
                         </div>
                     </div>

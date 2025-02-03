@@ -1276,3 +1276,9 @@ p.form-message.success, p.form-message.error {
   height: 100%;
   border: 0;
 }
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    margin-right: 0px;
+  }
+}

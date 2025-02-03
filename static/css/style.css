@@ -1570,7 +1570,8 @@ p.form-message.success, p.form-message.error {
   height: 530px;
 }
 
-.board_directors span {
+.board_directors span,
+.board_directors p {
   font-weight: bold;
 }
 
@@ -1598,3 +1599,9 @@ p.form-message.success, p.form-message.error {
   height: 300px;
   width: 100%;
 }
+
+.team_members span,
+.team_members p {
+  font-weight: bold;
+}
+
