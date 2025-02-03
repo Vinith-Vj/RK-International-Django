@@ -841,9 +841,9 @@ p {
 .management_image img {
   width: 100%;
   border-radius: 40px;
-  border-bottom-right-radius: 0;
+  /* border-bottom-right-radius: 0; */
   object-fit: cover;
-  height: 600px;
+  height: 555PX;
  }
 
  @media (max-width: 576px) {
@@ -1480,7 +1480,7 @@ p.form-message.success, p.form-message.error {
 .slider_content .slider_title {
   font-size: 65px;
   color: #f68020;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 15px rgb(255 255 255 / 65%);
   margin-top: 15px;
 }
 
@@ -1567,7 +1567,7 @@ p.form-message.success, p.form-message.error {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  height: 530px;
+  height: 590px;
 }
 
 .board_directors span,
