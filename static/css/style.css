@@ -1567,7 +1567,7 @@ p.form-message.success, p.form-message.error {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  height: 590px;
+  height: 660px;
 }
 
 .board_directors span,
@@ -1605,3 +1605,46 @@ p.form-message.success, p.form-message.error {
   font-weight: bold;
 }
 
+.royal_area{
+  padding-top: 0;
+}
+
+.royal_logo {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 100%;
+}
+
+.royal_logo img{
+  height: 100%;
+  width: 100%;
+}
+
+.royal_firms {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  height: 122px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 20px;
+}
+
+.royal_firms span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.royal_h4 {
+  text-align: justify;
+  margin-left: 20px;
+}
+
+@media (max-width: 576px) {
+  .royal_h4 {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
