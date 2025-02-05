@@ -1660,3 +1660,9 @@ p.form-message.success, p.form-message.error {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 576px) {
+  .transaprent_logo {
+    height: 50vh;
+  }
+}
