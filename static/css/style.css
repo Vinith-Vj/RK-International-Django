@@ -1648,3 +1648,15 @@ p.form-message.success, p.form-message.error {
     margin-left: 0;
   }
 }
+
+
+
+.transaprent_logo {
+  opacity: 0.1;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
