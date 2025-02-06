@@ -55,6 +55,30 @@
 </head>
 
 <body>
+    <div class="statement">
+        <div class="statement_title">
+            <h4 style="color: white;">CEO’s Statement</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              
+        </div>    
+        
+        <p style="color: white;">At RK INTERNATIONAL, we are driven by a commitment to excellence, innovation, and integrity in every project we undertake. As a leading construction firm in Oman, our goal is not just to build structures but to create lasting value for our clients, employees, and the communities we serve.
+
+            Over the years, our expertise has been tested and proven across diverse and complex projects, from large-scale infrastructure to specialized developments. What sets us apart is our dedication to quality, accountability, and continuous improvement, ensuring that every project meets the highest standards.
+            
+            A key pillar of our success is our people. We foster a diverse and inclusive workplace, empowering our employees with opportunities for growth and innovation. By investing in talent and embracing new technologies, we continue to push the boundaries of what is possible in the construction industry.
+            
+            Collaboration is at the heart of what we do. Strong partnerships with clients, stakeholders, and communities ensure the seamless execution of projects, reinforcing our reputation as a trusted industry leader.
+            
+            Looking ahead, we remain committed to sustaining our legacy of excellence, adapting to evolving market needs, and driving Oman’s progress through cutting-edge construction solutions. With integrity as our foundation, we continue to shape the future—one project at a time.
+        </p>
+
+        <span>Rahul Radhakrishnan </span>
+        <span>Chief Executive Officer, RK INTERNATIONAL</span>
+    </div>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -381,6 +405,8 @@
                         <p>BSC in Business Management (Leeds Beckett University , United Kingdom)</p>
                         <p> Active IQ Level 3 Diploma in Personal Training (UK)</p>
                         <p>F.A Level 2 in Coaching Football (UK)</p>
+
+                        <span class="statement_btn">CEO's Statement...</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 hovers mb-20">
@@ -399,13 +425,28 @@
                 </div>
             </div>
 
+            
+
 
             <div class="row mt-50 align-items-center">
                 <div class="col-12 mb-20">
                     <h2>Team Members</h2>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 hovers">
+                {% for member in team_members %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 hovers">
+                        <div class="team_members">
+                            <div class="team_members_img">
+                                <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                            </div>
+                            <h5>{{ member.name }}</h5>
+                            <p>{{ member.role }}</p>
+                            <div style="width: 100%;">
+                                <span>{{ member.education }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% comment %} <div class="col-lg-3 col-md-6 col-sm-6 hovers">
                     <div class="team_members">
                         <div class="team_members_img">
                             <img src="{% static "images/individuals.png" %}" alt="">
@@ -453,7 +494,7 @@
                             <span>DCE (Tamilnadu Directorate of Technical Education)</span>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
 
@@ -1054,6 +1095,7 @@
             <div class="row">
                 <div class="col-lg-5 royal_logo hovers" data-aos="flip-right" data-aos-duration="900">
                     <img src="{% static "images/Royal Group.png" %}" alt="">
+                    <p class="tag_line">Healthcare | Construction | Petroleum | Retail | Fitness</p>
                 </div>
                 <div class="col-lg-7">
                     <h5 data-aos="slide-down" data-aos-duration="800" class="royal_h4 mb-10">The Royal Group is a multinational firm with interests in Construction, Healthcare, Retail, Fitness and Petroleum</h5>
@@ -1275,7 +1317,7 @@
     {% comment %} <script src='{% static "js/app-slider.js" %}'></script> {% endcomment %}
     
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -1283,6 +1325,28 @@
       AOS.init({
         offset: 120,
       });
+
+      var statement = document.querySelector('.statement_btn')
+      var cross = document.querySelector('.statement_title svg')
+
+      var tl = gsap.timeline()
+
+      tl.to('.statement', {
+        left:0,
+        duration: 1
+    })
+
+    tl.pause()
+
+    statement.addEventListener('click', function() {
+        tl.play()
+    })
+
+    cross.addEventListener('click', function() {
+        tl.reverse()
+    })
+
+
     </script>
 
     

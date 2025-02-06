@@ -19,3 +19,12 @@ class Package(models.Model):
 
     def __str__(self):
         return self.title
+
+class TeamMember(models.Model):
+    name = models.CharField(max_length=250)
+    role = models.CharField(max_length=250)
+    education = models.CharField(max_length=250)
+    image = models.ImageField(upload_to='team_members/', default='images/individuals.png')
+
+    def __str__(self):
+        return self.name

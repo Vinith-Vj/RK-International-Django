@@ -22,6 +22,9 @@ $(function() {
         }
     });
 
+    
+    
+
     // $(window).on('scroll', function () {
     //     var scroll = $(window).scrollTop(); // Get the current scroll position
     

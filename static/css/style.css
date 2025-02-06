@@ -1567,7 +1567,7 @@ p.form-message.success, p.form-message.error {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  height: 660px;
+  height: 710px;
 }
 
 .board_directors span,
@@ -1614,11 +1614,25 @@ p.form-message.success, p.form-message.error {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   height: 500px;
   width: 100%;
+  
 }
 
 .royal_logo img{
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.royal_logo .tag_line {
+  position: absolute;
+  bottom: 110px;
+  font-weight: bold;
+}
+
+@media(max-width: 576px) {
+  .royal_logo .tag_line {
+    font-size: 15px;
+  }
 }
 
 .royal_firms {
@@ -1649,13 +1663,13 @@ p.form-message.success, p.form-message.error {
   }
 }
 
-
-
 .transaprent_logo {
   opacity: 0.1;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
+  z-index: -1; 
+  pointer-events: none;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1665,4 +1679,43 @@ p.form-message.success, p.form-message.error {
   .transaprent_logo {
     height: 50vh;
   }
+}
+
+
+.statement {
+  height: 80%;
+    width: 90%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.418);
+    top: 0%;
+    left: -150%;
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    color: white;
+    z-index: 1000;
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 10px;
+}
+
+@media(max-width: 576px) {
+  .statement{
+    height: 85%;
+    padding: 20px;
+    margin-left: 40px;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+}
+
+.statement_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statement_btn {
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Project, Package
+from .models import Project, Package, TeamMember
 from django.core.mail import send_mail 
 from django.conf import settings
 from django.contrib import messages
@@ -10,6 +10,7 @@ def index(request):
 
     projects = Project.objects.all()
     all_packages = Package.objects.all()
+    team_members = TeamMember.objects.all()
 
     if request.method == 'POST':
         message = request.POST['message']
@@ -44,5 +45,5 @@ def index(request):
         )
 
         return redirect('index')
-    return render(request, 'index.html', {'projects': projects, 'packages': all_packages})
+    return render(request, 'index.html', {'projects': projects, 'packages': all_packages, 'team_members': team_members})
 
