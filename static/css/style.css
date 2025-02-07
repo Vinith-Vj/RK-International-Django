@@ -1705,7 +1705,7 @@ p.form-message.success, p.form-message.error {
   .statement{
     height: 85%;
     padding: 20px;
-    margin-left: 40px;
+    margin-left: 22px;
     gap: 10px;
     overflow-y: scroll;
   }
