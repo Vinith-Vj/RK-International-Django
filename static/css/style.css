@@ -1193,7 +1193,11 @@ p.form-message.success, p.form-message.error {
         -moz-transition: all 0.3s ease-out 0s;
         -ms-transition: all 0.3s ease-out 0s;
         -o-transition: all 0.3s ease-out 0s;
-        transition: all 0.3s ease-out 0s; }
+        transition: all 0.3s ease-out 0s;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+       }
         .footer_link_wrapper .footer_link .link li a:hover {
           color: #FFB316; }
 
@@ -1742,7 +1746,7 @@ p.form-message.success, p.form-message.error {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
