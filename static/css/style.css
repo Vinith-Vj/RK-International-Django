@@ -1292,20 +1292,24 @@ p.form-message.success, p.form-message.error {
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   transition: bottom 0.3s ease, opacity 0.3s ease; 
   padding: 3%;
   gap: 2%;
   opacity: 0; 
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 40px;
+  overflow: hidden; /* Hides the scrollbars */
+  overflow-y: scroll;
 }
 
 .features_image:hover .features_content {
-  bottom: 0;
+  /* bottom: 0; */
   opacity: 1;
+  bottom: unset;
+  top: 0;
 }
 
 .features_titile {
@@ -1726,9 +1730,16 @@ p.form-message.success, p.form-message.error {
 }
 
 
+@media (max-width: 576px) {
+  .royal_area h5 {
+    text-align: unset;
+  }
+}
+
 
 .royal_firms_logo {
   height: 80px;
+  /* width: 100%; */
 }
 
 .royal_firms_logo img {
