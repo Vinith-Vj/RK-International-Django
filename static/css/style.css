@@ -1584,6 +1584,12 @@ p.form-message.success, p.form-message.error {
   height: 700px;
 }
 
+@media (max-width: 576px) {
+  .board_directors {
+    height: 750px;
+  }
+}
+
 .board_directors span,
 .board_directors p {
   font-weight: bold;
