@@ -898,6 +898,12 @@ p {
   .about_content .main-btn {
     margin-top: 45px; }
 
+    @media (max-width: 576px){
+      .about_content {
+        padding: 0;
+      }
+    }
+
 .management_content {
   padding: 0px;
  }
@@ -1575,7 +1581,7 @@ p.form-message.success, p.form-message.error {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  height: 670px;
+  height: 700px;
 }
 
 .board_directors span,
@@ -1633,7 +1639,7 @@ p.form-message.success, p.form-message.error {
 
 .royal_logo .tag_line {
   position: absolute;
-  bottom: 130px;
+  bottom: 110px;
   font-weight: bold;
 }
 
@@ -1788,4 +1794,8 @@ p.form-message.success, p.form-message.error {
   .table td, .table th {
     font-size: 13px;
   }
+}
+
+.gap-20 {
+  gap: 20px;
 }
