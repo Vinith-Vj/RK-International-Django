@@ -24,7 +24,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #677284; }
+  color: #677284; 
+  scrollbar-width: none;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -1309,6 +1311,7 @@ p.form-message.success, p.form-message.error {
   border-radius: 40px;
   overflow: hidden; /* Hides the scrollbars */
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .features_image:hover .features_content {
