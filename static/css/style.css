@@ -1575,7 +1575,7 @@ p.form-message.success, p.form-message.error {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  height: 710px;
+  height: 670px;
 }
 
 .board_directors span,
@@ -1778,4 +1778,14 @@ p.form-message.success, p.form-message.error {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .table thead th {
+    font-size: 13px;
+  }
+
+  .table td, .table th {
+    font-size: 13px;
+  }
 }

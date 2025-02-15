@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <div class="statement">
+    {% comment %} <div class="statement">
         <div class="statement_title">
             <h4 style="color: white;">CEO’s Statement</h4>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -78,7 +78,9 @@
 
         <span>Rahul Radhakrishnan </span>
         <span>Chief Executive Officer, RK INTERNATIONAL</span>
-    </div>
+    </div> {% endcomment %}
+
+    
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -346,7 +348,37 @@ Collaboration, respect, and a shared vision are the foundation of our success. W
                     <br>
                     <div class="d-flex justify-content-center">
 
-                        <span style='font-weight: bold;'>Chairman and Managing Director - <br> &nbsp &nbsp RADHAKRISHNAN NARAYANAN</span>
+                        <span style='font-weight: bold;'>Chairman and Managing Director - RADHAKRISHNAN NARAYANAN</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <br>
+            <div class="row align-itmes-center">
+                <div class="col-lg-6">
+                    <div class="management_content wow fadeInRightBig" >
+                        <h4 class="main_title">CEO’s STATEMENT</h4>
+                        <p>At RK INTERNATIONAL, we are driven by a commitment to excellence, innovation, and integrity in every project we undertake. As a leading construction firm in Oman, our goal is not just to build structures but to create lasting value for our clients, employees, and the communities we serve.<br><br>
+                            Over the years, our expertise has been tested and proven across diverse and complex projects, from large-scale infrastructure to specialized developments. What sets us apart is our dedication to quality, accountability, and continuous improvement, ensuring that every project meets the highest standards.
+                            <br><br>
+                            A key pillar of our success is our people. We foster a diverse and inclusive workplace, empowering our employees with opportunities for growth and innovation. By investing in talent and embracing new technologies, we continue to push the boundaries of what is possible in the construction industry.
+                            <br><br>
+                            Collaboration is at the heart of what we do. Strong partnerships with clients, stakeholders, and communities ensure the seamless execution of projects, reinforcing our reputation as a trusted industry leader.
+                            <br><br>
+                            Looking ahead, we remain committed to sustaining our legacy of excellence, adapting to evolving market needs, and driving Oman’s progress through cutting-edge construction solutions. With integrity as our foundation, we continue to shape the future—one project at a time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="management_image mt-80 wow fadeInLefttBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <img src="{% static "images/individuals.png" %}" alt="">
+                    </div> <!-- about image -->
+                    <br>
+                    <div class="d-flex justify-content-center">
+
+                        <span style='font-weight: bold;'>Chief Executive Officer - RAHUL RADHAKRISHNAN </span>
                     </div>
                 </div>
 
@@ -421,7 +453,7 @@ Collaboration, respect, and a shared vision are the foundation of our success. W
                         <p> Active IQ Level 3 Diploma in Personal Training (UK)</p>
                         <p>F.A Level 2 in Coaching Football (UK)</p>
 
-                        <span class="statement_btn">CEO's Statement...</span>
+                        {% comment %} <span class="statement_btn">CEO's Statement...</span> {% endcomment %}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 hovers mb-20">
