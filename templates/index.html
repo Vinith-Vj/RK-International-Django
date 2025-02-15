@@ -80,7 +80,7 @@
         <span>Chief Executive Officer, RK INTERNATIONAL</span>
     </div> {% endcomment %}
 
-    
+
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -1472,7 +1472,7 @@ Collaboration, respect, and a shared vision are the foundation of our success. W
         offset: 120,
       });
 
-      var statement = document.querySelector('.statement_btn')
+      {% comment %} var statement = document.querySelector('.statement_btn')
       var cross = document.querySelector('.statement_title svg')
 
       var tl = gsap.timeline()
@@ -1490,7 +1490,7 @@ Collaboration, respect, and a shared vision are the foundation of our success. W
 
     cross.addEventListener('click', function() {
         tl.reverse()
-    })
+    }) {% endcomment %}
 
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
