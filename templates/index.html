@@ -139,6 +139,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
+                                    <li class="nav-item active"><a class="page-scroll" href="#features">Mission/Vision</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#management">Management</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#services">Services</a></li>
@@ -218,7 +219,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="height: 90%">
                         <div class="features_image">
-                            <img src='{% static "images/img1.jpeg" %}' alt="features">
+                            <img src='{% static "images/vision.jpeg" %}' alt="features">
                             <div class="features_content">
                                 <div class="features_title" style="font-size: 30px;">Vision Statement</div>
                                 <div class="features_desc">"To be a leading and trusted construction company in Oman, recognized for our excellence in civil, commercial, and road construction projects, while delivering sustainable infrastructure solutions that contribute to the growth and development of the nation."</div>
@@ -1255,17 +1256,20 @@
                         <div class="col-lg-6">
                             <div class="royal_firms hovers">
                                 <div class="royal_firms_logo">
-                                    <img src='{% static "images/fuels.png" %}' alt="">
+                                    <img src='{% static "images/royal-fuels.png" %}' alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="royal_firms hovers">
-                                <div class="royal_firms_logo">
-                                    <img src='{% static "images/healthcare.png" %}' alt="">
+                            <a href="https://www.royalhealthcarekollam.com/">
+                                <div class="royal_firms hovers">
+                                    <div class="royal_firms_logo">
+                                        <img src='{% static "images/healthcare.png" %}' alt="">
+                                    </div>
+                                    {% comment %} <span data-aos="zoom-in" data-aos-duration="800">⁠⁠Royal Healthcare</span> {% endcomment %}
                                 </div>
-                                {% comment %} <span data-aos="zoom-in" data-aos-duration="800">⁠⁠Royal Healthcare</span> {% endcomment %}
-                            </div>
+                            </a>
+                            
                         </div>
                         <div class="col-lg-6">
                             <div class="royal_firms hovers">
@@ -1283,6 +1287,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+
+            <div class="carrer d-flex flex-column flex-lg-row gap-20 align-items-center" data-aos="slide-down" data-aos-duration="800"> 
+                <p>Wanna be a part of us ? Email us </p>
+                <div class="single_info d-flex align-items-center" style="margin: 0;">
+                    <div class="info_icon hovers">
+                        <i class="lni lni-envelope"></i>
+                    </div>
+                    <div class="info_content media-body">
+                        <p>rkinternational1952@gmail.com</p>
+                    </div>
+                </div> 
             </div>
         </div>
 
@@ -1406,6 +1424,7 @@
                                 <h4 class="footer_title">Links</h4>
                                 <ul class="link">
                                     <li><a class="page-scroll" href="#home">Home</a></li>
+                                    <li><a class="page-scroll" href="#features">Mission/Vision</a></li>
                                     <li><a class="page-scroll" href="#about">About</a></li>
                                     <li><a class="page-scroll" href="#management">Management</a></li>
                                     <li><a class="page-scroll" href="#services">Services</a></li>
