@@ -1655,6 +1655,7 @@ p.form-message.success, p.form-message.error {
 @media(max-width: 576px) {
   .royal_logo .tag_line {
     font-size: 15px;
+    bottom: 100px;
   }
 }
 
