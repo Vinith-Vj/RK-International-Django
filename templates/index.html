@@ -139,7 +139,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
-                                    <li class="nav-item active"><a class="page-scroll" href="#features">Mission&Vision</a></li>
+                                    <li class="nav-item"><a class="page-scroll mission-test" href="#features">Mission&Vision</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#management">Management</a></li>
                                     <li class="nav-item"><a class="page-scroll" href="#services">Services</a></li>
@@ -220,7 +220,7 @@
                     <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="height: 90%">
                         <div class="features_image">
                             <img src='{% static "images/vision.jpeg" %}' alt="features">
-                            <div class="features_content">
+                            <div class="features_content hover-effect-test">
                                 <div class="features_title" style="font-size: 30px;">Vision</div>
                                 <div class="features_desc">"To be a leading and trusted construction company in Oman, recognized for our excellence in civil, commercial, and road construction projects, while delivering sustainable infrastructure solutions that contribute to the growth and development of the nation."</div>
                             </div>
@@ -383,7 +383,7 @@
 
                 <div class="col-lg-6">
                     <div class="management_image mt-80 wow fadeInLefttBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <img src="{% static "images/rahul.jpeg" %}" alt="">
+                        <img src="{% static "images/rahul.jpeg" %}" alt="" style="object-fit: fill;">
                     </div> <!-- about image -->
                     <br>
                     <div class="d-flex flex-column justify-content-center align-items-center">
@@ -422,7 +422,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 hovers mb-20">
                     <div class='board_directors'>
                         <div class="individual_img">
-                            <img src="{% static "images/individuals.png" %}" alt="">
+                            <img src="{% static "images/Jayasree.jpeg" %}" alt="">
                         </div>
 
                         <h4>Jayasree Radhakrishnan</h4>
@@ -436,7 +436,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 hovers mb-20">
                     <div class='board_directors'>
                         <div class="individual_img">
-                            <img src="{% static "images/individuals.png" %}" alt="">
+                            <img src="{% static "images/athul.jpeg" %}" alt="">
                         </div>
 
                         <h4>Athul Radhakrishnan</h4>
@@ -1541,6 +1541,16 @@
     <script src='{% static "js/main.js" %}'></script>
     <script>
         const staticUrl = "{% static 'images/RK International background.png' %}";
+
+        document.querySelector('.mission-test').addEventListener('click', function() {
+            document.querySelector('.hover-effect-test').classList.add('hover-effect');
+            console.log('clicked');
+            
+            // Optional: Remove the effect after a few seconds
+            setTimeout(() => {
+                document.querySelector('.hover-effect-test').classList.remove('hover-effect');
+            }, 3000); // Removes effect after 2 seconds (adjust timing as needed)
+        });
     </script>
     
 </body>

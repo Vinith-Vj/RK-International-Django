@@ -1321,6 +1321,12 @@ p.form-message.success, p.form-message.error {
   top: 0;
 }
 
+.features_content.hover-effect {
+  opacity: 1;
+  bottom: unset;
+  top: 0;
+}
+
 .features_titile {
   font-size: 24px;
 }
